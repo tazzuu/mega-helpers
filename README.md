@@ -200,8 +200,6 @@ Take the following actions;
 
 Congrats you will now have a file called `mega_emails.txt` saved in the current directory with the contents of every email that has "MEGA" in it. We will use this for the next step.
 
-### Parse the emails
-
 
 #### `mutt` Resources
 
@@ -211,3 +209,7 @@ Congrats you will now have a file called `mega_emails.txt` saved in the current 
   - http://www.mutt.org/doc/manual/#patterns
 - https://github.com/JoshuaEstes/CheatSheets/blob/master/mutt.md
 - https://askubuntu.com/questions/105045/how-do-i-parse-emails-with-mutt#105049
+
+### Parse the emails
+
+- https://catonmat.net/introduction-to-perl-one-liners
