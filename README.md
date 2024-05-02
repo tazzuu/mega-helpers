@@ -70,4 +70,60 @@ Then it means your username and/or password is wrong.
 
 This method is a little tricker than the previous one and I have not been able to 100% script it up yet (any help is appreciated). But the goal here is to use the "+"-trick with Gmail to create a bunch of new accounts easily.
 
+First, you should create for yourself a "burner" Gmail account. You will need to enable 2-factor authentication (2FA) on it for the latter steps. Its also really really helpful if this account has a mostly empty Inbox with contents that you do not care about and are not sensitive and would not mind losing if anything bad were to happen.
+
+Next, you should update the included file `password.txt` with the password that you want to use for your NEW **Mega** accounts. To make life easier, you can use a long string of random numbers and letters, but consider avoiding special characters and especially avoid including the character `:` because that is used elsewhere.
+
+Now you can use the included script `register.sh` to create a bunch of new accounts. You will use the script by providing it with the base name of your email address, and the start and stop numbers to append to the address for registration. So, if your email address is `myemail@gmail.com` and you want to create 5 Mega accounts starting at number `1` and ending at number `5` then you will run the script like this
+
+```bash
+./register.sh myemail 1 5
+```
+
+If it works, it should give output like this
+
+```
+>>> Registering account for user myemail+1@gmail.com
+Registration email was sent to myemail+1@gmail.com. To complete registration, you must run:
+
+  megatools reg --verify FW...... @LINK@
+
+(Where @LINK@ is registration link from the 'MEGA Signup' email)
+success
+>>> Registering account for user myemail+2@gmail.com
+Registration email was sent to myemail+2@gmail.com. To complete registration, you must run:
+
+  megatools reg --verify FW...... @LINK@
+
+(Where @LINK@ is registration link from the 'MEGA Signup' email)
+success
+
+```
+
+The script will also create / update the new file `registered_users.txt` which you can open to see the list of new accounts that were created (username, password, and token).
+
+Congrats you just created a bunch of new Mega accounts!
+
+## Verify the new accounts
+
+The hardest part is performing the verification step on these accounts. To verify, you would normally need to click through the link sent in the email. However, because we just created hundreds of new Mega accounts, we dont have time to click a hundred email links. So, we are going to configure our email so that we can pull it down on the command line and dump it out and scrape it to get the verification links back.
+
+First, you need to log in to your Gmail account, and make sure you have enabled 2FA ;
+
+- https://myaccount.google.com/security
+
+Next, you need to create an App Password for Gmail
+
+- https://myaccount.google.com/apppasswords
+
+- having trouble? some helpful links;
+  - https://support.google.com/accounts/answer/185833
+  - https://support.google.com/accounts/answer/185833?hl=en
+  - https://support.google.com/mail/thread/4477145/no-app-passwords-under-security-signing-in-to-google-panel?hl=en
+
+Next, you need to enable IMAP access to your Gmail Inbox
+
+- https://support.google.com/mail/answer/7126229
+- https://support.google.com/mail/answer/7104828?hl=en&ref_topic=7280141&sjid=7499020491168243840-NC
+
 # Resources

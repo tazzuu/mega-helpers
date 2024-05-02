@@ -24,7 +24,7 @@ PASSWORD="$(grep -v '#' "${PASSWORDFILE}" | head -1)"
 for i in $(seq "${STARTNUM}" "${STOPNUM}"); do
 EMAIL="${USERNAME}+${i}@${DOMAIN}" # email+1@gmail.com
 echo ">>> Registering account for user ${EMAIL}"
-megatools reg -e "${EMAIL}" -p "${PASSWORD}" -n "${NAME}" --register && \
+TOKEN="$(megatools reg -e "${EMAIL}" -p "${PASSWORD}" -n "${NAME}" --register 2>&1 | grep megatools | sed -e 's|.*megatools reg --verify \(.*\) @LINK@|\1|g')" && \
     echo "success" && \
-    echo "${EMAIL}" >> "${REGFILE}" || echo "ERROR: registration failed for some reason"
+    printf "%s\t%s\t%s\n" "${EMAIL}" "${PASSWORD}" "${TOKEN}" >> "${REGFILE}" || echo "ERROR: registration failed for some reason"
 done
