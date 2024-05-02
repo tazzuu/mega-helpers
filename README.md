@@ -106,9 +106,9 @@ Congrats you just created a bunch of new Mega accounts!
 
 ## Verify the new accounts
 
-### Configure Gmail
-
 The hardest part is performing the verification step on these accounts. To verify, you would normally need to click through the link sent in the email. However, because we just created hundreds of new Mega accounts, we dont have time to click a hundred email links. So, we are going to configure our email so that we can pull it down on the command line and dump it out and scrape it to get the verification links back.
+
+### Configure Gmail
 
 First, you need to log in to your Gmail account, and make sure you have enabled 2FA ;
 
