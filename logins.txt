@@ -1,0 +1,6 @@
+# you can comment out lines like this
+# REPLACE the contents of this file with your logins!
+myemail@gmail.com:hunter2
+myemail+1@gmail.com:hunter2
+myemail+2@gmail.com:hunter2
+myemail+3@gmail.com:hunter2
