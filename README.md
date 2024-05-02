@@ -184,6 +184,30 @@ Now, if it worked properly, you can finally start the program;
 mutt
 ```
 
-If it worked, you should see it logging in to your email account and pulling down your inbox contents. Note that since we only enabled IMAP at login, not offline, and we did not enable SMTP, it *should* only be able to read your emails, not propgate changes back to your Inbox... I think.
+If it worked, you should see it logging in to your email account and pulling down your inbox contents.
+  - Note that since we only enabled IMAP at login, not offline, and we did not enable SMTP, it *should* only be able to read your emails, not propgate changes back to your Inbox... I think.
 
-# Resources
+You should now see `mutt` take over your entire screen with its interactive terminal-based email client. The next step is to Tag all emails that contain the word "Mega", and Save them to a file.
+
+Take the following actions;
+
+- press `<shift>+T` to open the "Tag" search prompt
+- type the word "MEGA" and press `<enter>` and you should see a `*` appear next to all the matching emails (and ones offscreen)
+- now press `;` to open the `tag-` command prompt
+- now type `s` to bring up the "save file" prompt; it will fill in with a default filename such as `welcome=`, you can just press Backspace until you delete the name, and enter a new file name such as `mega_emails.txt` and press `<enter>`
+- at the confirmation prompt ("Create mega_emails.txt?") type `y`, and the emails will be exported from your `mutt` Inbox to the file you specified
+- to quit mutt, press `q`, and when it asks if you want to delete purged emails, just say `n` for "no"
+
+Congrats you will now have a file called `mega_emails.txt` saved in the current directory with the contents of every email that has "MEGA" in it. We will use this for the next step.
+
+### Parse the emails
+
+
+#### `mutt` Resources
+
+- http://www.mutt.org/
+  - http://www.mutt.org/doc/manual/#commands
+  - http://www.mutt.org/doc/manual/#configuration
+  - http://www.mutt.org/doc/manual/#patterns
+- https://github.com/JoshuaEstes/CheatSheets/blob/master/mutt.md
+- https://askubuntu.com/questions/105045/how-do-i-parse-emails-with-mutt#105049
