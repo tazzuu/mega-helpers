@@ -65,4 +65,9 @@ ERROR: couldnt log in to myemail@gmail.com
 
 Then it means your username and/or password is wrong.
 
+
+## Register new accounts
+
+This method is a little tricker than the previous one and I have not been able to 100% script it up yet (any help is appreciated). But the goal here is to use the "+"-trick with Gmail to create a bunch of new accounts easily.
+
 # Resources
