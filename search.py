@@ -33,7 +33,7 @@ with open(input_file, 'r') as fin:
                     # its the URL we wanted so grab it and print it then break out of the loop
                     elif next_line.startswith('https://mega.nz/#confirm'):
                         url = next_line.strip()
-                        print(address, url)
+                        print("{}\t{}".format(address, url))
                         break
                     # it was neither a To: line or URL so keep looking ahead
                     next_line = fin.readline()

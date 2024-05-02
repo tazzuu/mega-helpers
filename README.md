@@ -212,4 +212,10 @@ Congrats you will now have a file called `mega_emails.txt` saved in the current 
 
 ### Parse the emails
 
-- https://catonmat.net/introduction-to-perl-one-liners
+Next we need to scrape the dumped emails to extract the matching email addresses, and their URL's for verification links.
+
+We will do that with the included Python script (make sure you have Python 3 installed)
+
+```bash
+./search.py mega_emails.txt > mega_email_links.txt
+```
