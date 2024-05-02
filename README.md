@@ -52,7 +52,7 @@ Run the script with this super simple command
 Should look like this
 
 ```
->>> username: myemail@gmail.com password: hunter2
+>>> logging in to account: myemail@gmail.com
 successful login
 ```
 
