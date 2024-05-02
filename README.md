@@ -106,6 +106,8 @@ Congrats you just created a bunch of new Mega accounts!
 
 ## Verify the new accounts
 
+### Configure Gmail
+
 The hardest part is performing the verification step on these accounts. To verify, you would normally need to click through the link sent in the email. However, because we just created hundreds of new Mega accounts, we dont have time to click a hundred email links. So, we are going to configure our email so that we can pull it down on the command line and dump it out and scrape it to get the verification links back.
 
 First, you need to log in to your Gmail account, and make sure you have enabled 2FA ;
@@ -137,7 +139,51 @@ Next, you need to enable IMAP access to your Gmail Inbox
 
 ![](pics/imap_access.png)
 
-- https://support.google.com/mail/answer/7126229
-- https://support.google.com/mail/answer/7104828?hl=en&ref_topic=7280141&sjid=7499020491168243840-NC
+- need help? try some of these;
+  - https://support.google.com/mail/answer/7126229
+  - https://support.google.com/mail/answer/7104828?hl=en&ref_topic=7280141&sjid=7499020491168243840-NC
+  - https://www.socketlabs.com/blog/smtp-or-imap/
+
+OK great now we have IMAP enabled on our Gmail inbox. This will let us retrieve our emails from the computer, without needing to use the Gmail website in the web browser.
+
+### Configure `mutt`
+
+To retrieve our emails, we are going to use the program `mutt`. Install it if its missing from your computer;
+
+(macOS)
+
+```bash
+brew install mutt
+```
+
+The program `mutt` can be configured with a file named `~/.muttrc` or `~/.mutt/muttrc`.There is a template version included here in the repo, called `muttrc`. Now you should first edit this template file.
+
+In the included file `muttrc` you should fill in these two lines with your values
+
+```
+set imap_user = "myemail@gmail.com"
+set imap_pass = "app-password-goes-here"
+```
+
+Insert your Gmail account username, and the App Password that you got from Gmail. Save the changes to the file.
+
+Now we will copy and rename the file to our home directory ; make sure you do not already have a copy of the file beforehand! If so then rename the old one and move this one in its place.
+
+Copy the `muttrc` file like this
+
+```bash
+cp muttrc ~/.muttrc
+
+# for good measure lets pre-create the other mutt dir as per the config
+mkdir ~/.mutt
+```
+
+Now, if it worked properly, you can finally start the program;
+
+```bash
+mutt
+```
+
+If it worked, you should see it logging in to your email account and pulling down your inbox contents. Note that since we only enabled IMAP at login, not offline, and we did not enable SMTP, it *should* only be able to read your emails, not propgate changes back to your Inbox... I think.
 
 # Resources
