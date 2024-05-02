@@ -121,7 +121,21 @@ Next, you need to create an App Password for Gmail
   - https://support.google.com/accounts/answer/185833?hl=en
   - https://support.google.com/mail/thread/4477145/no-app-passwords-under-security-signing-in-to-google-panel?hl=en
 
+Save your app password in plain text somewhere handy because you will be copy/pasting it into the terminal soon. The app password will be a 16-digit string; make sure to remove all the spaces in it. No spaces allowed despite the fact that Google displays it with spaces.
+
 Next, you need to enable IMAP access to your Gmail Inbox
+
+- find the section for "See All Settings"
+
+![](pics/quick_settings.png)
+
+- go to "Forwarding and IMAP"
+
+![](pics/forwarding.png)
+
+- enable IMAP Access
+
+![](pics/imap_access.png)
 
 - https://support.google.com/mail/answer/7126229
 - https://support.google.com/mail/answer/7104828?hl=en&ref_topic=7280141&sjid=7499020491168243840-NC
