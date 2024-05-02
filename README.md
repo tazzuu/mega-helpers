@@ -68,7 +68,7 @@ Then it means your username and/or password is wrong.
 
 ## Register new accounts
 
-This method is a little tricker than the previous one and I have not been able to 100% script it up yet (any help is appreciated). But the goal here is to use the "+"-trick with Gmail to create a bunch of new accounts easily.
+This method is a little tricker than the previous one and I have not been able to 100% script it up yet (any help is appreciated). But the goal here is to use the "+"-trick with Gmail to create a bunch of new Mega accounts easily, which all route back to a single Gmail inbox.
 
 First, you should create for yourself a "burner" Gmail account. You will need to enable 2-factor authentication (2FA) on it for the latter steps. Its also really really helpful if this account has a mostly empty Inbox with contents that you do not care about and are not sensitive and would not mind losing if anything bad were to happen.
 

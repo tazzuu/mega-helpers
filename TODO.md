@@ -1,0 +1,5 @@
+- make it so that the final registered & verified new accounts list can get merged back into the "logins" list
+  - this is difficult because I made the logins list ':' delimited for easier typing in Notepad, but the character ":" is included in the tokens and url (?) needed for verification so I had to use tab-delim for those files instead
+  - maybe there is an easier file format to use? kinda afraid to introduce JSON or SQLite
+- file chunking & uploading script
+- script to see how many files, and how much free space, is on each account
