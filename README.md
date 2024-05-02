@@ -219,3 +219,17 @@ We will do that with the included Python script (make sure you have Python 3 ins
 ```bash
 ./search.py mega_emails.txt > mega_email_links.txt
 ```
+
+Now we will join that file against the file of registered users that we created previously
+
+```bash
+join -1 1 -2 1 <(sort mega_email_links.txt) <(sort registered_users.txt) > mega_links_password_token.txt
+```
+
+Finally, we can get to the part that you've all been waiting for, and verify the user accounts using the text file we created
+
+```bash
+./verify.sh mega_links_password_token.txt
+```
+
+If it works you should see some messages saying "success"

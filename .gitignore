@@ -2,3 +2,7 @@ registered_users.txt
 .DS_Store
 mega_emails.txt
 mega_email_links.txt
+mega_emails.txt.bu
+mega_links_password_token.txt
+password.txt.bu
+registered_users.txt.bu
