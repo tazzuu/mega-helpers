@@ -4,4 +4,5 @@
 - file chunking & uploading script
 - script to see how many files, and how much free space, is on each account
 - consider if we should instead try using Golang to write the scripts and helpers in... might be easier to do more complex actions, but tradeoff is that it will be harder to understand the source code and it will have to run the shell commands inside the program which is never fun
-- see if we can incorporate the .megarc file
+- ~~see if we can incorporate the .megarc file~~
+  - .megarc file only supports one account https://megatools.megous.com/man/megarc.html
